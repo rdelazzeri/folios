@@ -1,0 +1,25 @@
+<table id="list-table" class="table table-hover">
+    <thead class="thead-light ">
+      <tr>
+        <th class="text-center" scope="col">#</th>
+        <th class="text-center" scope="col">slug</th>
+        <th class="text-center" scope="col">title</th>
+        <th class="text-center" scope="col">content</th>
+        <th class="text-center" scope="col">date_ini</th>
+        <th class="text-center" scope="col">date_end</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for it in object_list %}
+        <tr>
+          <th class="text-center" scope="row">{{ forloop.counter }}</th>
+          <td class="text-center">{{ it.slug }}</td>
+          <td class="text-center">{{ it.title }}</td>
+          <td class="text-center">{{ it.content }}</td>
+          <td class="text-center">{{ it.data_ini|date:"SHORT_DATE_FORMAT"}}</td>
+          <td class="text-center">{{ it.data_end|date:"SHORT_DATE_FORMAT"}}</td>
+        </tr>
+      {% endfor %}
+  
+    </tbody>
+  </table>

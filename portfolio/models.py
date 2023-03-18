@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from datetime import datetime    
 
 
-class Post(models.Model):
+class Folio(models.Model):
     slug = models.SlugField(max_length=60, unique=True)
     title = models.CharField(max_length=60)
     desc = models.CharField(max_length=600)

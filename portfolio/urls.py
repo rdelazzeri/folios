@@ -5,6 +5,7 @@ from . import views as v
 app_name = 'portfolio'
 
 urlpatterns = [
-    path('', v.cover, name = 'cover'),
+    path('', v.WelcomeView.as_view(), name = 'welcome'),
+    path('folios', v.PortfolioView.as_view(), name = 'portfolio'),
 
 ]
