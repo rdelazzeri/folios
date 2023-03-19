@@ -21,8 +21,9 @@ class Folio(models.Model):
 class Picture(models.Model):
     title = models.CharField(max_length=80)
     desc = models.CharField(max_length=600)
-    file = models.FileField()
+    file = models.FileField(upload_to='media/pics')
     date_post = models.DateTimeField()
+    folio = models.ForeignKey(Folio, on_delete=CASCADE, null=True)
 
 
 class Link(models.Model):
@@ -30,3 +31,4 @@ class Link(models.Model):
     desc = models.CharField(max_length=600)
     link = models.URLField()
     date_post = models.DateTimeField()
+    folio = models.ForeignKey(Folio, on_delete=CASCADE, null=True)

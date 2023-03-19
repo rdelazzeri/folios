@@ -8,3 +8,7 @@ class WelcomeView(TemplateView):
 class PortfolioView(ListView):
   model = Folio
   template_name = 'portfolio/portfolio.html'
+
+class FolioView(DetailView):
+  model = Folio
+  template_name = 'portfolio/folio.html'
