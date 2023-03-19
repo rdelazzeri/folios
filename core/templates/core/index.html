@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h1>Bem-vindo!</h1>
+    <p>Meu portfolio</p>
+    <p>
+      {% if user.is_authenticated %}
+        <a href="/accounts/logout">SAIR</a>
+      {% else %}
+        <a href="/accounts/login">LOGIN</a>
+      {% endif %}
+    </p>
+
+
+{% endblock content %}
